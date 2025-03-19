@@ -1,0 +1,9 @@
+usuario 1 lo crea en github, luego los dos hacen un git clone con el link
+
+creas archivo
+git add "nombre archivo"
+git commit -m "mensaje"
+git push 
+
+git pull origin main para actualizar los dos
+
