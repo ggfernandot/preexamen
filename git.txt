@@ -2,8 +2,25 @@ usuario 1 lo crea en github, luego los dos hacen un git clone con el link
 
 creas archivo
 git add "nombre archivo"
+si quieres subir todos los archivos juntos git add .
 git commit -m "mensaje"
 git push 
 
 git pull origin main para actualizar los dos
 
+
+El error que ves se debe a que alguien (probablemente Luis) ya hizo cambios en la rama main en GitHub, pero tú no los tienes en tu máquina. Git te está diciendo que primero descargues esos cambios antes de hacer tu push.
+
+Solución paso a paso
+1. Descargar los cambios remotos antes de subir los tuyos
+
+Ejecuta este comando:
+
+git pull --rebase origin main
+📌 ¿Qué hace esto?
+
+Descarga los cambios que hay en GitHub (pull).
+Intenta aplicar tus cambios encima de ellos (rebase), en lugar de hacer un "merge" que podría generar conflictos.
+Si esto funciona sin errores, ya puedes hacer el push:
+
+git push origin main
