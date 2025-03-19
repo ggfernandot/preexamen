@@ -24,3 +24,8 @@ Intenta aplicar tus cambios encima de ellos (rebase), en lugar de hacer un "merg
 Si esto funciona sin errores, ya puedes hacer el push:
 
 git push origin main
+
+
+si ocupa mucho utiliza 
+git config --global http.postBuffer 524288000
+git push origin main
